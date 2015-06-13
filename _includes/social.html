@@ -1,0 +1,22 @@
+
+  {{! A social media head tags to help with sharing specific pages. }}
+
+  {{! Facebook Meta Tags  }}
+  <meta property="og:title" content="Built With Ember"/>
+  <meta property="og:type" content="website"/>
+  {% if page.url == '/'  %}
+  <meta property="og:url" content="{{ site.url }}"/>
+  {% else %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+  {% endif %}
+  <meta property="og:image" content="{{ site.url }}/img/share-logo.jpg"/>
+  <meta property="og:site_name" content="Built With Ember"/>
+  <meta property="fb:admins" content="501641940"/>
+
+  {{! Twitter Link Tags }}
+  {% if page.url == '/'  %}
+  <link rel="canonical" href="{{ site.url }}">
+  {% else %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
+  <link rel="me" href="https://twitter.com/builtwithember">

@@ -177,6 +177,9 @@ a.paginate:hover {
   border-bottom-right-radius: 3px;
 }
 
+// Social styles
+@import 'social';
+
 /* xs */
 @media (min-width: 0px) and (max-width: 767px) {
   .main-sidebar {
