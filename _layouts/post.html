@@ -2,36 +2,13 @@
 layout: default
 ---
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=236628663033029&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <div class="posts">
   <div class="post-description">
     <h3 class="post-description-title"><a href="{{ page.url }}" class="post-description-link">{{ page.title }}</a></h3>
     <p class="post-description-date">{{ page.date | date: "%B %-d, %Y" }}</p>
 
-	<!-- TODO: Add some description markup for `link` and `share` modifiers -->
-	<div class="post-description__link">
-	  <a class='post-description-link' href="{{ post.url }}">Visit Site</a>
-	</div>
-	<div class="post-description__share">
-	  <span class='post-description-share'>Share</span>
-	  <ul>
-		<li>
-		<div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-		</li>
-		<li>
-		<a href="https://twitter.com/intent/tweet?text={{ page.title }}&hashtags=emberjs,{{ page.tags }}" class="twitter-share-button" data-related="BuiltWithEmber" data-count="none">Tweet</a>
-		  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		</li>
-	  </ul>
-	</div>
+	{% include social-markup.html %}
+
   </div>
 
   <a href="{{ page.source }}" class="screenshot-link" target="_blank">

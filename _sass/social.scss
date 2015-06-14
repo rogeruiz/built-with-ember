@@ -1,2 +1,35 @@
-// Social Styles
+// Social Links Styles
+// @see _includes/social-markup.html
 
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  margin: 50px auto;
+  width: 60%;
+}
+
+.social-links__link {
+  flex: 1 1 auto;
+}
+.social-links__internal {
+
+}
+.social-links__external {}
+
+.social-links__title {}
+
+.social-links__list {
+  display: none;
+
+  &.is-active {
+	display: block;
+  }
+}
+
+.social-links__item {}
+.social-links__facebook {}
+.social-links__twitter {}
+.social-links__googleplus {}
